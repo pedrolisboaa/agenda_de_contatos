@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Contato
+from .models import Contato, Categoria
 
 # Register your models here
 
@@ -11,4 +11,9 @@ class ContatoAdmin(admin.ModelAdmin):
     search_fields = 'id', 'nome', 'sobrenome', 'telefone', 'email'
     list_per_page = 20
     list_display_links = ('id', 'nome', ) 
+
+
+@admin.register(Categoria)
+class CategoriaAdmin(admin.ModelAdmin):
+    list_display = ('nome',)
     
