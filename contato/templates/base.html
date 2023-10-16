@@ -14,7 +14,30 @@
 </head>
 <body>
 
-    <h1>Qualquer coisa</h1>
+    <header class="header">
+        <div class="header__container container__titulo">
+            <h1>Agendinha</h1>
+        </div>
+        <div class="header__container container_menu">
+            <ul>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Registro</a></li>
+            </ul>
+        </div >
+        <div class="header__container container_busca">
+            <form action="">
+                <input type="text" placeholder="Buscar">
+            </form>
+        </div>
+    </header>
+
+    {% block conteudo %}
     
+    {% endblock conteudo %}
+    
+
+    <footer class="footer">
+        Pedro Lisboa &copy 2023
+    </footer>
 </body>
 </html>
