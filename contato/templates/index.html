@@ -5,8 +5,8 @@
 {% block conteudo %}
 
 
-    <main class="container__main">
-        <div class="container_contatos">
+    <div class="container__main">
+        <div class="container__contatos">
 
             <h2>Contatos</h2>
 
@@ -21,15 +21,22 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td></td>
-                    </tr>
+                    {% for contato in contatos %}
+                        <tr>
+                            <td>{{contato.id}}</td>
+                            <td>{{contato.nome}}</td>
+                            <td>{{contato.sobrenome}}</td>
+                            <td>{{contato.telefone}}</td>
+                            <td>{{contato.email}}</td>
+                        </tr>
+                    {% endfor %}
+                    
                 </tbody>
             </table>
 
         </div>
 
-    </main>
+    </div>
 
 
 
