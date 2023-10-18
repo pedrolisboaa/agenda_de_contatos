@@ -15,20 +15,26 @@
 <body>
 
     <header class="header">
+
         <div class="header__container container__titulo">
-            <h1>Agendinha</h1>
+            <a href="{% url 'index' %}">
+                <h1>Agendinha</h1>
+            </a>
         </div>
+
         <div class="header__container container_menu">
             <ul>
                 <li><a href="#">Login</a></li>
                 <li><a href="#">Registro</a></li>
             </ul>
         </div >
+
         <div class="header__container container_busca">
-            <form action="">
-                <input type="text" placeholder="Buscar">
+            <form action="" method="get">
+                <input type="search" placeholder="Buscar" name="q" id="buscar">
             </form>
         </div>
+
     </header>
 
     {% block conteudo %}
