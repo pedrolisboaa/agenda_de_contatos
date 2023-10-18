@@ -10,18 +10,16 @@ body {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-/* Centralizando o título na barra de cabeçalho */
+
 .container__titulo {
   text-align: center;
 }
 
-/* Estilizando a barra de cabeçalho */
 .header {
   background-color: #333;
   color: #fff;
   padding: 10px;
 }
-
 
 .container_menu ul {
   list-style: none;
@@ -38,7 +36,6 @@ body {
   text-decoration: none;
   color: white; 
 }
-
 
 .container_busca form {
   display: flex;
@@ -65,6 +62,30 @@ body {
   background-color: #fff; /* Cor de fundo para a tabela */
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra à tabela */
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2; 
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #e0e0e0; 
 }
 
 

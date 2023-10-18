@@ -3,13 +3,9 @@
 {% block titulo %} Agendinha! {% endblock %} 
 
 {% block conteudo %}
-
-
     <div class="container__main">
         <div class="container__contatos">
-
             <h2>Contatos</h2>
-
             <table>
                 <thead>
                     <tr>
@@ -23,7 +19,9 @@
                 <tbody>
                     {% for contato in contatos %}
                         <tr>
-                            <td>{{contato.id}}</td>
+                            <td>
+                                <a href="{% url 'contato_unico' contato.id %}">{{contato.id}}</a> 
+                            </td>
                             <td>{{contato.nome}}</td>
                             <td>{{contato.sobrenome}}</td>
                             <td>{{contato.telefone}}</td>
@@ -33,11 +31,10 @@
                     
                 </tbody>
             </table>
-
         </div>
-
     </div>
 
 
-
+    
+    
 {% endblock conteudo %}
