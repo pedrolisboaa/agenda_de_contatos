@@ -96,3 +96,57 @@ tbody tr:nth-child(odd) {
   padding: 10px 0;
   width: 100%;
 }
+
+
+/* Estilo para a estrutura de paginação */
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Estilo para os links de paginação */
+.pagination a {
+  text-decoration: none;
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin: 2px;
+}
+
+/* Estilo para o link atual */
+.pagination .current {
+  background-color: #acacac;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Estilo para os links "previous" e "next" */
+.pagination .prev,
+.pagination .next {
+  font-weight: bold;
+}
+
+/* Estilo para os links "first" e "last" */
+.pagination .first,
+.pagination .last {
+  font-weight: bold;
+}
+
+/* Estilo para os ícones de setas (opcional) */
+.pagination .prev::before,
+.pagination .next::after,
+.pagination .first::before,
+.pagination .last::after {
+  content: '\2190'; /* Setinha para a esquerda */
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.pagination .next::after,
+.pagination .last::after {
+  content: '\2192'; /* Setinha para a direita */
+  margin-right: 0;
+}

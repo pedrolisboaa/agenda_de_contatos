@@ -31,7 +31,7 @@
 
         <div class="header__container container_busca">
             <form action="{% url 'buscar' %}" method="get">
-                <input type="search" placeholder="Buscar" name="q" id="buscar">
+                <input type="search" placeholder="Buscar" name="q" id="buscar" value={{valor_buscar}}>
             </form>
         </div>
 
@@ -39,7 +39,10 @@
 
     {% block conteudo %}
     
+        
+    
     {% endblock conteudo %}
+
     
 
     <footer class="footer">

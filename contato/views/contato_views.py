@@ -2,14 +2,22 @@ from django.shortcuts import render, redirect
 from contato.models import Contato
 from django.http import Http404
 from django.db.models import Q
+from django.core.paginator import Paginator
 
 # Create your views here.
 
 def index(request):
     contatos = Contato.objects.filter(mostrar=True).order_by('-id')
+
+    paginator = Paginator(contatos, 10) 
+
+    page_number = request.GET.get("page")
+    page_obj = paginator.get_page(page_number)
+
     context = {
         #'contatos': contatos,
-        'contatos': contatos
+        'contatos': page_obj,
+
     }
     
     return render(request, 'index.html', context)
@@ -21,6 +29,7 @@ def buscar(request):
     if valor_buscar == '':
         return(redirect('index'))
     
+    
     contatos = Contato.objects \
     .filter(mostrar=True) \
     .filter(
@@ -30,8 +39,13 @@ def buscar(request):
         Q(sobrenome__icontains=valor_buscar)) \
     .order_by('id')
 
+    paginator = Paginator(contatos, 10) 
+    page_number = request.GET.get("page")
+    page_obj = paginator.get_page(page_number)
+
     context = {
-        'contatos': contatos
+        'contatos': page_obj,
+        'valor_buscar': valor_buscar,
     }
     
     return render(request, 'index.html', context)
