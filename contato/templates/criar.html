@@ -9,19 +9,15 @@
     <div class="container__main">
         <div class="container__contatos">
             <form action="{% url 'criar' %}" method="POST" enctype="multipart/form-data">
-
                 {% csrf_token %}
 
-                
                 {{ formulario}} 
                
-
                 <div class="form-content">
                     <div class="form-group">
                     <button class="btn" type="submit">Enviar</button>
                     </div>
                 </div>
-
     </form>
         </div>
     </div>
