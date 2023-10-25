@@ -189,3 +189,36 @@ input[type="text"] {
 .btn:hover {
     background-color: #0056b3;
 }
+
+
+.btn__atualizar,
+.btn__deletar {
+  display: inline-block;
+  width: 150px; /* Largura fixa para ambos os botões (ajuste conforme necessário) */
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn__atualizar {
+  margin-right: 10px; /* Espaço entre os botões */
+}
+
+.btn__deletar {
+  background-color: #ff0000; /* Cor vermelha para o botão "Deletar" */
+}
+
+.btn__atualizar:hover {
+  background-color: #0056b3;
+}
+
+.btn__deletar:hover {
+  background-color: #ff3333;
+}
+
