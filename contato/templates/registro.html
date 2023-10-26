@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block titiulo %}
+    Registro
+{% endblock titiulo %}
+
+{% block conteudo %}
+
+    <div class="container__main">
+        <div class="container__contatos">
+            <h2>Registro de Usuários</h2>
+            <form action="{{ acao_formulario }}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                {{ formulario}} 
+               
+                <div class="form-content">
+                    <div class="form-group">
+                    <button class="btn" type="submit">Enviar</button>
+                </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+{% endblock conteudo %}
+
+

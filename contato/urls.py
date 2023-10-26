@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import index, contato_unico, buscar, criar, atualizar, deletar
+from .views import index, contato_unico, buscar, criar, atualizar, deletar, registro
 
 urlpatterns = [ 
     path('buscar/', buscar, name='buscar'),
@@ -10,5 +10,8 @@ urlpatterns = [
     path('contato/<int:id_contato>/atualizar/', atualizar, name='atualizar'),
     path('contato/<int:id_contato>/detelar/', deletar, name='deletar'),
     path('contato/criar/', criar, name='criar'),
+    
+    # Formulario criação
+    path('usuario/registro/', registro, name='registro')
    
 ]
